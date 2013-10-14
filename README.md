@@ -8,9 +8,9 @@ Specifically, kind(item) returns the global object that best matches that item.
 
 So:
 
- - So: ```kind(NaN) is 'NaN'```
- - And: ```kind([1, 2, 3]) is 'Array'```
- - And **Numbers, Functions etc created in odd ways** (eg, using constructors) are still 'Number', 'Function', etc.
+ - So: ```kind(NaN)``` is ```'NaN'```
+ - And: ```kind([1, 2, 3])``` is ```'Array'```
+ - And **Numbers, Functions etc created in odd ways** (eg, using constructors) are still ```'Number'```, ```'Function'```, etc.
 
 [![Build Status](https://secure.travis-ci.org/mikemaccana/kind.js.png?branch=master)](https://travis-ci.org/mikemaccana/kind.js)
 
