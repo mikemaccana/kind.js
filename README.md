@@ -1,4 +1,4 @@
-# kind.js
+![kind.js](https://raw.github.com/mikemaccana/kind.js/master/images/kind.js.png)
 
 ## Tells you what something is, the same way you'd describe it.
 
