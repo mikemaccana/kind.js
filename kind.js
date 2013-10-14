@@ -21,7 +21,7 @@
   }
 
   this.kind = function(item) {
-    var kind, Undefined, Class
+    var kind, Undefined
 
     if (item === null ) {
       kind = 'null'
