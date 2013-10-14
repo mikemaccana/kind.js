@@ -15,40 +15,27 @@
     root.returnExports = factory();
   }
 }(this, function () {
+
+  function getPrototype(item) {
+    return Object.prototype.toString.call(item).slice(8, -1)
+  }
+
   this.kind = function(item) {
-    // Always returns same name as global objects, ie Titlecase except for undefined
-    var kind = typeof(item)
-    if ( kind !== 'undefined' ) {
-      kind = kind.charAt(0).toUpperCase() + kind.slice(1);
-    }
-    if ( ( kind === 'Number' ) && ( isNaN(item) ) ) {
-      kind = 'NaN'
-    }
-    if ( kind === 'Object' ) {
-      if ( Array.isArray(item) ) {
-        kind = 'Array'
+    var kind, Undefined, Class
+
+    if (item === null ) {
+      kind = 'null'
+    } else {
+      if ( item === Undefined ) {
+        kind = 'undefined'
       } else {
-        if ( item === null) {
-          kind = 'null'
+        var prototype = getPrototype(item)
+        if ( ( prototype === 'Number' ) && isNaN(item) ) {
+          kind = 'NaN'
         } else {
-          if ( item instanceof Date ) {
-            kind = 'Date'
-          } else {
-            if ( item instanceof Boolean) {
-              kind = 'Boolean'
-            } else {
-              if ( item instanceof Number ) {
-                kind = 'Number'
-              } else {
-                if ( item instanceof String ) {
-                  kind = 'String'
-                }
-              }
-            }
-          }
+          kind = prototype
         }
       }
-
     }
     return kind
   }

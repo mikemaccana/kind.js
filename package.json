@@ -1,6 +1,6 @@
 {
   "name": "kind",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Mike MacCana <mike.maccana@gmail.com>",
   "description": "Tells you what something is, the same way you'd describe it.",
   "scripts": {
