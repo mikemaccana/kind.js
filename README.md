@@ -31,8 +31,8 @@ Specifically, kind(item) returns the global object that best matches that item. 
 
 ### Strings
 
-    kind('' === 'String'
-    kind('bla' === 'String'
+    kind('') === 'String'
+    kind('bla') === 'String'
     kind(String("abc")) === 'String'
     kind(new String("abc")) === 'String'
 
