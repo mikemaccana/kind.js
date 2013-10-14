@@ -43,12 +43,14 @@ describe('Booleans', function(){
 describe('Array', function(){
   it('shows arrays accurately', function(){
     assert(kind([1, 2, 4]) === 'Array')
+    assert(kind(new Array(1, 2, 3)) === 'Array')
   });
 });
 
 describe('Object', function(){
   it('shows objects accurately', function(){
     assert(kind({a:1}) === 'Object')
+    assert(kind(new Object()) === 'Object')
   });
 });
 

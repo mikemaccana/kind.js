@@ -46,10 +46,12 @@ Specifically, kind(item) returns the global object that best matches that item. 
 ### Arrays
 
     kind([1, 2, 4]) === 'Array'
+    kind(new Array(1, 2, 3)) === 'Array'
 
 ### Objects
 
     kind({a:1}) === 'Object'
+    kind(new Object()) === 'Object'
 
 ### Dates
 
