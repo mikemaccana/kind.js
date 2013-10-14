@@ -2,7 +2,11 @@
 
 ## Tells you what something is, the same way you'd describe it.
 
-kind.js returns the kind of a JS object (the same as what a human would).
+kind.js returns the kind of a JS object, the way same a human being would.
+
+Specifically, kind(item) returns the global object that best matches that item.
+
+So kind(NaN) is 'NaN', kind([1, 2, 3]) is 'Array', and even Numbers, Functions etc created in odd ways are still 'Number', 'Function', etc.
 
 [![Build Status](https://secure.travis-ci.org/mikemaccana/kind.js.png?branch=master)](https://travis-ci.org/mikemaccana/kind.js)
 
@@ -10,53 +14,52 @@ kind.js returns the kind of a JS object (the same as what a human would).
 
 ### Numbers
 
-    assert(kind(37) === 'Number')
-    assert(kind(3.14) === 'Number')
-    assert(kind(Math.LN2) === 'Number')
-    assert(kind(Infinity) === 'Number')
-    assert(kind(Number(1)) === 'Number')
-    assert(kind(new Number(1)) === 'Number')
+    kind(37) === 'Number'
+    kind(3.14) === 'Number'
+    kind(Math.LN2) === 'Number'
+    kind(Infinity) === 'Number'
+    kind(Number(1)) === 'Number'
+    kind(new Number(1)) === 'Number'
 
-### Nan
+### NaN
 
-    assert(kind(NaN) === 'NaN')
+    kind(NaN) === 'NaN'
 
 ### Strings
 
-    assert(kind('') === 'String')
-    assert(kind('bla') === 'String')
-    assert(kind(String("abc")) === 'String')
-    assert(kind(new String("abc")) === 'String')
+    kind('' === 'String'
+    kind('bla' === 'String'
+    kind(String("abc")) === 'String'
+    kind(new String("abc")) === 'String'
 
 
 ### Booleans
 
-    assert(kind(true) === 'Boolean')
-    assert(kind(false) === 'Boolean')
-    assert(kind(new Boolean(true)) === 'Boolean')
+    kind(true) === 'Boolean'
+    kind(false) === 'Boolean'
+    kind(new Boolean(true)) === 'Boolean'
 
 ### Arrays
 
-    assert(kind([1, 2, 4]) === 'Array')
+    kind([1, 2, 4]) === 'Array'
 
 ### Objects
 
-    assert(kind({a:1}) === 'Object')
+    kind({a:1}) === 'Object'
 
 ### Dates
 
-    assert(kind(new Date()) === 'Date')
+    kind(new Date()) === 'Date'
 
-### Function
+### Functions
 
-    assert(kind(function(){}) === 'Function')
-    assert(kind(new Function("console.log(arguments)")) === 'Function')
-    assert(kind(Math.sin) === 'Function')
-
+    kind(function(){}) === 'Function'
+    kind(new Function("console.log(arguments)")) === 'Function'
+    kind(Math.sin) === 'Function'
 
 ### undefined
 
-    assert(kind(undefined) === 'undefined')
+    kind(undefined) === 'undefined'
 
 ## Usage
 
