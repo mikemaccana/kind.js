@@ -2,15 +2,15 @@
 
 ## Tells you what something is, the same way you'd describe it.
 
-kind.js returns the kind of a JS object, the way same a human being would.
-
-Specifically, kind(item) returns the global object that best matches that item.
+kind.js returns the **kind** of a JS object: ie, how a human would describe that object.
 
 So:
 
  - So: ```kind(NaN)``` is ```'NaN'```
  - And: ```kind([1, 2, 3])``` is ```'Array'```
  - And **Numbers, Functions etc created in odd ways** (eg, using constructors) are still ```'Number'```, ```'Function'```, etc.
+
+Specifically, kind(item) returns the global object that best matches that item. Full examples are below.
 
 [![Build Status](https://secure.travis-ci.org/mikemaccana/kind.js.png?branch=master)](https://travis-ci.org/mikemaccana/kind.js)
 
