@@ -71,3 +71,9 @@ describe('undefined', function(){
     assert(kind(undefined) === 'undefined')
   });
 });
+
+describe('null', function(){
+  it('shows null accurately', function(){
+    assert(kind(null) === 'null')
+  });
+});

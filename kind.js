@@ -27,22 +27,28 @@
     if ( kind === 'Object' ) {
       if ( Array.isArray(item) ) {
         kind = 'Array'
-      }
-      if ( item instanceof Date ) {
-        kind = 'Date'
       } else {
-        if ( item instanceof Boolean) {
-          kind = 'Boolean'
+        if ( item === null) {
+          kind = 'null'
         } else {
-          if ( item instanceof Number ) {
-            kind = 'Number'
+          if ( item instanceof Date ) {
+            kind = 'Date'
           } else {
-            if ( item instanceof String ) {
-              kind = 'String'
+            if ( item instanceof Boolean) {
+              kind = 'Boolean'
+            } else {
+              if ( item instanceof Number ) {
+                kind = 'Number'
+              } else {
+                if ( item instanceof String ) {
+                  kind = 'String'
+                }
+              }
             }
           }
         }
       }
+
     }
     return kind
   }

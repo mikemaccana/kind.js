@@ -65,6 +65,10 @@ Specifically, kind(item) returns the global object that best matches that item. 
 
     kind(undefined) === 'undefined'
 
+### null
+
+    kind(null) === 'null'
+
 ## Usage
 
 Kind is a UMD module (compatible with both AMD and CommonJS).  **kind grabs the global 'kind'**, so you can call it easily.
