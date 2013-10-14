@@ -6,7 +6,11 @@ kind.js returns the kind of a JS object, the way same a human being would.
 
 Specifically, kind(item) returns the global object that best matches that item.
 
-So kind(NaN) is 'NaN', kind([1, 2, 3]) is 'Array', and even Numbers, Functions etc created in odd ways are still 'Number', 'Function', etc.
+So:
+
+ - So: ```kind(NaN) is 'NaN'```
+ - And: ```kind([1, 2, 3]) is 'Array'```
+ - And **Numbers, Functions etc created in odd ways** (eg, using constructors) are still 'Number', 'Function', etc.
 
 [![Build Status](https://secure.travis-ci.org/mikemaccana/kind.js.png?branch=master)](https://travis-ci.org/mikemaccana/kind.js)
 
