@@ -31,8 +31,8 @@ So:
 
 ### Strings
 
-    kind('' === 'String'
-    kind('bla' === 'String'
+    kind('') === 'String'
+    kind('bla') === 'String'
     kind(String("abc")) === 'String'
     kind(new String("abc")) === 'String'
 
